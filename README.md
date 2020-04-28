@@ -1,3 +1,15 @@
+###Как установить / Installation steps
+```$xslt
+    - git clone https://github.com/GareginH/yii2-billing.git
+    - cd ./yii2-billing
+    - composer update
+    - Меняем информацию про базу данных в config/db.php || Change DB info in config/db.php
+    - yii migrate
+    - yii seed
+    - yii serve 
+```
+<hr>
+<hr>
 <p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
