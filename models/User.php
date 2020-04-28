@@ -120,6 +120,6 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
      */
     public function getBillings()
     {
-        return $this->hasMany(Billing::className(), ['user_id' => 'id']);
+        return $this->hasMany(Billing::class, ['user_id' => 'id']);
     }
 }
