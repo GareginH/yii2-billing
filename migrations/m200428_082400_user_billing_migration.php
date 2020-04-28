@@ -24,7 +24,7 @@ class m200428_082400_user_billing_migration extends Migration
             'amount'=>$this->double(),
             'user_id'=>$this->integer()
         ]);
-        $this->addForeignKey('FK_billing_user', 'billing', 'user_id', 'user', 'id');
+        $this->addForeignKey('FK_billing_user', 'billing', 'user_id', 'user', 'id', "CASCADE", "CASCADE");
     }
 
     /**

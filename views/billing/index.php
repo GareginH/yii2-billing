@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Billing', ['create'], ['class' => 'btn btn-success']) ?>
+        <?=  !Yii::$app->user->isGuest ? (Html::a('Create Billing', ['create'], ['class' => 'btn btn-success'])):"" ?>
     </p>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
     <?= GridView::widget([
@@ -23,8 +23,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             'id',
             'amount',
-            'user_id',
             'user.username',
+            'user_id',
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

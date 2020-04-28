@@ -38,12 +38,9 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Главная', 'url' => ['/site/index']],
+            ['label' => 'Платежи', 'url' => ['/billing']],
             Yii::$app->user->isGuest ? (
             ['label' => 'Регистрация', 'url' => ['/site/signup']]
-            ):'',
-            !Yii::$app->user->isGuest ? (
-            ['label' => 'Платежи', 'url' => ['/billing']]
             ):'',
             Yii::$app->user->isGuest ? (
                 ['label' => 'Вход', 'url' => ['/site/login']]

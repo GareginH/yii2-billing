@@ -65,6 +65,9 @@ class BillingController extends Controller
      */
     public function actionCreate()
     {
+        if(Yii::$app->user->isGuest){
+            return $this->redirect('/');
+        }
         $model = new Billing();
 
         if ($model->load(Yii::$app->request->post()) && $model->store()) {
@@ -85,6 +88,9 @@ class BillingController extends Controller
      */
     public function actionUpdate($id)
     {
+        if(Yii::$app->user->isGuest){
+            return $this->redirect('/');
+        }
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
