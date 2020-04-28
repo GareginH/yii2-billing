@@ -3,9 +3,10 @@
     - git clone https://github.com/GareginH/yii2-billing.git
     - cd ./yii2-billing
     - composer update
-    - Меняем информацию про базу данных в config/db.php || Change DB info in config/db.php
+    - Меняем информацию о базе данных в config/db.php || Change DB info in config/db.php
     - yii migrate
-    - yii seed
+    - Для заполнения базы данных рандомными данными || To fill the database with random seeds
+        - yii seed
     - yii serve 
 ```
 <hr>
