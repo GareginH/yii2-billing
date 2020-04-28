@@ -15,7 +15,9 @@ class m200428_082400_user_billing_migration extends Migration
         $this->createTable('user', [
             'id'=>$this->primaryKey(),
             'username'=>$this->string(50)->notNull(),
-            'password'=>$this->string()->notNull()
+            'password'=>$this->string()->notNull(),
+            'authKey'=>$this->string()->notNull(),
+            'accessToken'=>$this->string()->notNull(),
         ]);
         $this->createTable('billing',[
             'id'=>$this->primaryKey(),
@@ -30,7 +32,6 @@ class m200428_082400_user_billing_migration extends Migration
      */
     public function safeDown()
     {
-        echo "m200428_082400_user_billing_migration cannot be reverted.\n";
         $this->dropForeignKey('FK_billing_user', 'billing');
         $this->dropTable('billing');
         $this->dropTable('user');
